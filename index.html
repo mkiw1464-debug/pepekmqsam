@@ -10,12 +10,13 @@
         :root {
             --primary-cyan: #00f2fe;
             --primary-emerald: #10b981;
-            --bg-dark: #070b0d;
+            --bg-dark: #05080a;
         }
         body {
             background-color: var(--bg-dark);
             color: #f1f5f9;
             font-family: 'Inter', sans-serif;
+            letter-spacing: -0.01em;
         }
         .gradient-text {
             background: linear-gradient(90deg, var(--primary-cyan) 0%, var(--primary-emerald) 100%);
@@ -23,52 +24,56 @@
             -webkit-text-fill-color: transparent;
         }
         .logo-img {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             margin: 0 auto 20px;
-            border-radius: 25px;
+            border-radius: 30px;
             object-fit: cover;
-            border: 2px solid rgba(16, 185, 129, 0.3);
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 40px rgba(0, 242, 254, 0.2);
         }
         .main-card {
-            background: rgba(13, 22, 26, 0.95);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            position: relative;
+            background: rgba(10, 15, 20, 0.98);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
-        /* Style untuk Plan yang boleh ditekan */
+        /* Custom Icon Styling */
+        .icon-style {
+            font-size: 0.9rem;
+            width: 20px;
+            text-align: center;
+        }
+        /* Interactive Plans */
         .plan-box {
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background: rgba(0, 0, 0, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
         }
         .plan-box:hover {
             border-color: var(--primary-cyan);
-            background: rgba(16, 185, 129, 0.1);
+            background: rgba(0, 242, 254, 0.05);
+            transform: translateY(-2px);
         }
         .plan-box.active {
             border-color: var(--primary-emerald);
-            background: rgba(16, 185, 129, 0.2);
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
-            transform: scale(1.02);
+            background: rgba(16, 185, 129, 0.15);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
         }
-        /* Glowing animation for Buy Now */
         .btn-buy {
-            background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
-            transition: 0.3s;
-            animation: pulse-glow 2s infinite;
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            transition: 0.4s ease;
+            box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.5);
         }
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        .btn-buy:hover {
+            filter: brightness(1.2);
+            letter-spacing: 1px;
         }
     </style>
 </head>
-<body class="py-10 px-4">
+<body class="py-12 px-4">
 
-    <div class="text-center mb-10">
+    <div class="text-center mb-12">
         <img src="https://i.ibb.co/HpN4hJvk/image.png" class="logo-img" alt="Azurite Logo">
         <h1 class="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">
             AZURITE <span class="gradient-text">REMOTE IOS</span>
@@ -76,99 +81,114 @@
     </div>
 
     <div class="max-w-xl mx-auto">
-        <div class="main-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
+        <div class="main-card rounded-[2.5rem] p-8 md:p-12">
             
-            <div class="mb-8">
-                <p class="text-emerald-400 font-bold italic mb-3">_Feature:_</p>
-                <ul class="space-y-1 text-xl font-black italic text-white pl-2">
-                    <li>- AIMDRAG ❗️</li>
-                    <li>- AIMDRAG X HOLO ❗️</li>
+            <div class="mb-10">
+                <p class="text-emerald-400 font-bold italic mb-4 text-xs tracking-[0.2em] uppercase">_Feature:_</p>
+                <ul class="space-y-2 text-2xl font-black italic text-white">
+                    <li class="flex items-center gap-3"><span class="text-red-500">◈</span> AIMDRAG <span class="text-red-500 font-bold">❗️</span></li>
+                    <li class="flex items-center gap-3"><span class="text-red-500">◈</span> AIMDRAG X HOLO <span class="text-red-500 font-bold">❗️</span></li>
+                </ul>
+            </div>
+
+            <div class="mb-12">
+                <p class="text-emerald-400 font-bold italic mb-5 text-xs tracking-[0.2em] uppercase">_Benefits:_</p>
+                <ul class="space-y-3 text-[13px] font-bold text-gray-300">
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span>ANTIBAN</span> <i class="fas fa-shield-halved text-emerald-400 icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span>BOLEH ON / OFF CHEAT</span> <i class="fas fa-toggle-on text-emerald-400 icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span>ANTIBLACKLIST</span> <i class="fas fa-user-shield text-emerald-400 icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span>FF MAX / FF ORI</span> <i class="fas fa-gamepad text-emerald-400 icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2 text-cyan-400">
+                        <span>NO PC / NO FILE</span> <i class="fas fa-times-circle icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span>INJECT VIA ID FF</span> <i class="fas fa-fingerprint text-emerald-400 icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span>ANTI BONGKAR</span> <i class="fas fa-lock text-emerald-400 icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between border-b border-white/5 pb-2 text-red-400 font-black">
+                        <span>NO GBOX / ESSIGN</span> <i class="fas fa-ban icon-style"></i>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span>FULL SUPPORT 24/7</span> <i class="fas fa-headset text-emerald-400 icon-style"></i>
+                    </li>
                 </ul>
             </div>
 
             <div class="mb-10">
-                <p class="text-emerald-400 font-bold italic mb-3">_Benefits:_</p>
-                <ul class="space-y-2 text-sm font-bold text-gray-300 pl-2">
-                    <li>ANTIBAN ✅</li>
-                    <li>BOLEH ON / OFF CHEAT ✅</li>
-                    <li>ANTIBLACKLIST ✅</li>
-                    <li>FF MAX / FF ORI ✅</li>
-                    <li>NO PC ✅</li>
-                    <li>NO FILE ✅</li>
-                    <li>INJECT VIA ID FF ✅</li>
-                    <li>ANTI BONGKAR ✅</li>
-                    <li>NO GBOX / ESSIGN ✅</li>
-                    <li>FULL SUPPORT 24/7 ✅</li>
-                </ul>
-            </div>
-
-            <div class="mb-10">
-                <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-4">PILIH PELAN LANGGANAN:</p>
-                <div class="grid grid-cols-2 gap-3" id="planContainer">
-                    <div class="plan-box p-4 rounded-2xl text-center" onclick="selectPlan(this, '1 DAY', 'RM10')">
-                        <p class="text-[10px] text-emerald-500 font-bold uppercase">1 DAY</p>
-                        <p class="text-xl font-black text-white italic">RM10</p>
+                <p class="text-gray-600 text-[10px] font-black uppercase tracking-[0.3em] mb-5 text-center italic">Select Your Access Plan</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="plan-box p-5 rounded-3xl text-center" onclick="selectPlan(this, '1 DAY', 'RM10')">
+                        <p class="text-[9px] text-emerald-500 font-black uppercase tracking-widest mb-1">1 DAY</p>
+                        <p class="text-2xl font-black text-white italic tracking-tighter">RM10</p>
                     </div>
-                    <div class="plan-box p-4 rounded-2xl text-center" onclick="selectPlan(this, '3 DAY', 'RM15')">
-                        <p class="text-[10px] text-emerald-500 font-bold uppercase">3 DAY</p>
-                        <p class="text-xl font-black text-white italic">RM15</p>
+                    <div class="plan-box p-5 rounded-3xl text-center" onclick="selectPlan(this, '3 DAY', 'RM15')">
+                        <p class="text-[9px] text-emerald-500 font-black uppercase tracking-widest mb-1">3 DAY</p>
+                        <p class="text-2xl font-black text-white italic tracking-tighter">RM15</p>
                     </div>
-                    <div class="plan-box p-4 rounded-2xl text-center" onclick="selectPlan(this, '7 DAY', 'RM35')">
-                        <p class="text-[10px] text-emerald-500 font-bold uppercase">7 DAY</p>
-                        <p class="text-xl font-black text-white italic">RM35</p>
+                    <div class="plan-box p-5 rounded-3xl text-center" onclick="selectPlan(this, '7 DAY', 'RM35')">
+                        <p class="text-[9px] text-emerald-500 font-black uppercase tracking-widest mb-1">7 DAY</p>
+                        <p class="text-2xl font-black text-white italic tracking-tighter">RM35</p>
                     </div>
-                    <div class="plan-box p-4 rounded-2xl text-center active" onclick="selectPlan(this, '30 DAY', 'RM70')" id="defaultPlan">
-                        <p class="text-[10px] text-emerald-400 font-black uppercase italic">30 DAY (FULL)</p>
-                        <p class="text-xl font-black text-white italic">RM70</p>
+                    <div class="plan-box p-5 rounded-3xl text-center active" onclick="selectPlan(this, '30 DAY', 'RM70')">
+                        <p class="text-[9px] text-emerald-400 font-black uppercase tracking-widest mb-1">30 DAY VIP</p>
+                        <p class="text-2xl font-black text-white italic tracking-tighter">RM70</p>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <button onclick="addToCart()" class="bg-gray-800 hover:bg-gray-700 py-4 rounded-2xl text-white font-bold text-xs uppercase transition">
-                    ADD TO CART
-                </button>
+            <div class="space-y-4">
                 <a id="buyNowBtn" href="https://wa.me/60143191625?text=Hello%20Azurite%20iOS,%20I%20want%20to%20buy%20Remote%20iOS%20(30%20DAY)" 
                    target="_blank"
-                   class="btn-buy md:col-span-2 flex items-center justify-center py-4 rounded-2xl text-white font-black text-lg uppercase italic tracking-tighter">
-                   <i class="fab fa-whatsapp mr-2 text-xl"></i> BUY NOW
+                   class="btn-buy w-full flex items-center justify-center py-5 rounded-3xl text-white font-black text-xl uppercase italic tracking-tighter">
+                   <i class="fab fa-whatsapp mr-3 text-2xl"></i> BUY NOW
                 </a>
+                <button onclick="addToCart()" class="w-full bg-transparent border border-white/10 hover:border-emerald-500/50 py-4 rounded-3xl text-gray-400 hover:text-white font-bold text-xs uppercase transition tracking-widest">
+                    ADD TO CART
+                </button>
             </div>
 
-            <div class="mt-8 text-center bg-white/5 p-4 rounded-2xl">
-                <p class="text-[10px] text-gray-500 mb-2 uppercase italic font-bold">For information Azurite can join this channel WhatsApp</p>
-                <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="text-xs font-black text-emerald-400 hover:text-white transition uppercase">
-                   Join Official Channel <i class="fas fa-external-link-alt ml-1"></i>
+            <div class="mt-10 pt-8 border-t border-white/5 text-center">
+                <p class="text-[10px] text-gray-500 mb-3 uppercase font-bold italic tracking-wider">Join for Updates & Information</p>
+                <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500/10 px-5 py-2 rounded-full text-emerald-400 font-black text-[11px] hover:bg-emerald-500/20 transition-all uppercase">
+                   <i class="fab fa-whatsapp"></i> Azurite Official Channel
                 </a>
             </div>
         </div>
     </div>
 
-    <footer class="mt-16 text-center text-gray-800 text-[10px] font-black tracking-[0.4em] uppercase pb-10">
-        AZURITE IOS SECURITY &copy; 2026
+    <footer class="mt-16 text-center text-gray-800 text-[10px] font-black tracking-[0.5em] uppercase pb-10">
+        AZURITE IOS SECURITY SOLUTIONS &copy; 2026
     </footer>
 
     <script>
         let selectedPlanName = "30 DAY";
+        let selectedPrice = "RM70";
 
         function selectPlan(element, planName, price) {
-            // Buang class active dari semua box
             const plans = document.querySelectorAll('.plan-box');
             plans.forEach(p => p.classList.remove('active'));
-            
-            // Tambah class active pada yang ditekan
             element.classList.add('active');
             
-            // Simpan nama plan
             selectedPlanName = planName;
+            selectedPrice = price;
             
-            // Update link WhatsApp
+            // Update WhatsApp Link secara automatik
             const waLink = `https://wa.me/60143191625?text=Hello%20Azurite%20iOS,%20I%20want%20to%20buy%20Remote%20iOS%20(${planName}%20-%20${price})`;
             document.getElementById('buyNowBtn').href = waLink;
         }
 
         function addToCart() {
-            alert("Success! " + selectedPlanName + " plan has been added to your cart.");
+            alert(`✅ Added ${selectedPlanName} (${selectedPrice}) to cart!`);
         }
     </script>
 
