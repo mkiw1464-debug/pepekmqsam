@@ -10,7 +10,6 @@
         :root {
             --primary-glow: #00ffc8;
             --bg-dark: #0a0f12;
-            --card-bg: #141e24;
             --wa-green: #25D366;
         }
         body {
@@ -58,10 +57,6 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        .wa-float:hover {
-            transform: scale(1.05);
-            filter: brightness(1.1);
-        }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -72,36 +67,39 @@
     </a>
 
     <header class="text-center mb-16">
-        <h1 class="text-5xl font-black tracking-tighter mb-2 italic">AZURITE <span class="gradient-text">IOS</span></h1>
-        <p class="text-gray-400 uppercase tracking-widest text-xs font-semibold">Ultimate Mobile Solution & Professional Injections</p>
+        <h1 class="text-5xl font-black tracking-tighter mb-2 italic uppercase">AZURITE <span class="gradient-text">IOS</span></h1>
+        <p class="text-gray-400 uppercase tracking-widest text-xs font-semibold">Premium Injection & High Performance Scripts</p>
     </header>
 
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <div class="glass-card rounded-3xl p-8 flex flex-col border-l-4 border-l-teal-500">
+        <div class="glass-card rounded-3xl p-8 flex flex-col border-l-4 border-l-teal-500 relative overflow-hidden">
+            <div class="absolute top-4 right-4 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded italic">MOST POPULAR</div>
+            
             <div class="mb-6">
-                <span class="bg-teal-900/50 text-teal-400 text-xs font-bold px-3 py-1 rounded-full border border-teal-500/30">PREMIUM METHOD</span>
+                <span class="bg-teal-900/50 text-teal-400 text-xs font-bold px-3 py-1 rounded-full border border-teal-500/30 uppercase tracking-tighter">Remote Method</span>
                 <h2 class="text-3xl font-bold mt-4">AZURITE REMOTE IOS</h2>
                 <p class="text-4xl font-black text-white mt-2">RM200 <span class="text-sm font-normal text-gray-500">/ VIP</span></p>
             </div>
 
             <div class="flex-grow">
-                <p class="text-teal-400 font-bold mb-3 border-b border-gray-800 pb-2 text-xs">FEATURES:</p>
+                <p class="text-teal-400 font-bold mb-3 border-b border-gray-800 pb-2 text-xs">SPECIAL FEATURES:</p>
                 <ul class="space-y-2 text-sm mb-6">
                     <li class="flex items-center"><i class="fas fa-crosshairs mr-2 text-red-500"></i> AIMDRAG ❗️</li>
                     <li class="flex items-center"><i class="fas fa-bullseye mr-2 text-red-500"></i> AIMDRAG X HOLO ❗️</li>
+                    <li class="flex items-center font-bold text-white mt-2 italic"><i class="fas fa-bolt mr-2 text-yellow-400"></i> INJECT VIA ID FF ONLY ✅</li>
                 </ul>
 
-                <p class="text-teal-400 font-bold mb-3 border-b border-gray-800 pb-2 text-xs">BENEFITS:</p>
+                <p class="text-teal-400 font-bold mb-3 border-b border-gray-800 pb-2 text-xs uppercase">Premium Benefits:</p>
                 <ul class="grid grid-cols-2 gap-2 text-[11px] mb-8">
-                    <li class="flex items-center text-gray-300"><i class="fas fa-check-circle text-teal-500 mr-2"></i> ANTIBAN</li>
+                    <li class="flex items-center text-gray-300"><i class="fas fa-shield-alt text-teal-500 mr-2"></i> ANTIBAN</li>
                     <li class="flex items-center text-gray-300"><i class="fas fa-power-off text-teal-500 mr-2"></i> ON/OFF CHEAT</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-shield-virus text-teal-500 mr-2"></i> ANTIBLACKLIST</li>
+                    <li class="flex items-center text-gray-300"><i class="fas fa-ban text-teal-500 mr-2"></i> ANTI BLACKLIST</li>
                     <li class="flex items-center text-gray-300"><i class="fas fa-gamepad text-teal-500 mr-2"></i> FF MAX / ORI</li>
+                    <li class="flex items-center text-gray-300 font-bold text-red-400"><i class="fas fa-times-circle mr-2"></i> NO GBOX/ESIGN</li>
+                    <li class="flex items-center text-gray-300 font-bold text-red-400"><i class="fas fa-times-circle mr-2"></i> NO SCARLET</li>
                     <li class="flex items-center text-gray-300"><i class="fas fa-mobile-alt text-teal-500 mr-2"></i> NO PC / NO FILE</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-fingerprint text-teal-500 mr-2"></i> INJECT VIA ID</li>
                     <li class="flex items-center text-gray-300"><i class="fas fa-lock text-teal-500 mr-2"></i> ANTI BONGKAR</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-headset text-teal-500 mr-2"></i> 24/7 SUPPORT</li>
                 </ul>
             </div>
 
@@ -113,26 +111,34 @@
 
         <div class="glass-card rounded-3xl p-8 border-gray-700">
             <div class="mb-6">
-                <span class="bg-gray-800 text-gray-400 text-xs font-bold px-3 py-1 rounded-full">LITE EDITION</span>
+                <span class="bg-gray-800 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Lite Edition</span>
                 <h2 class="text-3xl font-bold mt-4">AZURITE LITE IOS</h2>
-                <p class="text-sm text-gray-500 mt-2 italic">Requires PC/Laptop for installation</p>
+                <p class="text-sm text-gray-500 mt-2 italic font-medium">Requires PC/Laptop for installation</p>
             </div>
 
             <div class="space-y-3 mb-8">
                 <div class="grid grid-cols-1 gap-2">
                     <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
-                        <span class="text-sm">AimChest / AimBody</span>
-                        <span class="text-teal-400 font-bold">RM75</span>
+                        <span class="text-sm">AimChest - RM75</span>
+                        <i class="fas fa-plus-circle text-teal-500"></i>
                     </div>
                     <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
-                        <span class="text-sm">AimNeck / AimDrag</span>
-                        <span class="text-teal-400 font-bold">RM75</span>
+                        <span class="text-sm">AimBody - RM75</span>
+                        <i class="fas fa-plus-circle text-teal-500"></i>
+                    </div>
+                    <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
+                        <span class="text-sm">AimNeck - RM75</span>
+                        <i class="fas fa-plus-circle text-teal-500"></i>
+                    </div>
+                    <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
+                        <span class="text-sm">AimDrag - RM75</span>
+                        <i class="fas fa-plus-circle text-teal-500"></i>
                     </div>
                 </div>
 
                 <p class="text-teal-400 font-bold border-b border-gray-800 pb-2 text-xs pt-4 uppercase">Benefits:</p>
                 <ul class="space-y-2 text-sm">
-                    <li class="flex items-center text-gray-400"><i class="fas fa-shield-alt text-teal-600 mr-2"></i> ANTIBAN & ANTIBLACKLIST</li>
+                    <li class="flex items-center text-gray-400"><i class="fas fa-shield-alt text-teal-600 mr-2"></i> ANTIBAN & BLACKLIST</li>
                     <li class="flex items-center text-gray-400"><i class="fas fa-laptop text-teal-600 mr-2"></i> PASANG PAKAI PC / LAPTOP</li>
                     <li class="flex items-center text-gray-400"><i class="fas fa-headset text-teal-600 mr-2"></i> FULL SUPPORT 24/7</li>
                 </ul>
@@ -150,16 +156,16 @@
         <div class="bg-gradient-to-r from-teal-900/20 to-transparent p-6 rounded-2xl border border-teal-500/20 text-center md:text-left md:flex justify-between items-center">
             <div>
                 <h3 class="text-xl font-bold text-white mb-1">Stay Updated!</h3>
-                <p class="text-gray-400 text-sm">For more information and latest updates, you can join our WhatsApp Channel.</p>
+                <p class="text-gray-400 text-sm italic">For information Azurite can join this channel WhatsApp.</p>
             </div>
-            <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="mt-4 md:mt-0 inline-block bg-[#25D366] text-black font-black px-6 py-3 rounded-full hover:bg-green-400 transition">
-                JOIN WHATSAPP CHANNEL
+            <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="mt-4 md:mt-0 inline-block bg-[#25D366] text-black font-black px-6 py-3 rounded-full hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition duration-300">
+                <i class="fab fa-whatsapp mr-2"></i> JOIN WHATSAPP CHANNEL
             </a>
         </div>
     </div>
 
     <footer class="mt-20 text-center text-gray-600 text-[10px] uppercase tracking-widest pb-10">
-        <p>&copy; 2026 AZURITE IOS. POWERED BY NETLIFY</p>
+        <p>&copy; 2026 AZURITE IOS | SECURITY & STABILITY IS OUR PRIORITY</p>
     </footer>
 
 </body>
