@@ -3,169 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZURITE IOS | Official Store</title>
+    <title>AZURITE REMOTE iOS | Official Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-glow: #00ffc8;
-            --bg-dark: #0a0f12;
-            --wa-green: #25D366;
+            --primary-cyan: #00f2fe;
+            --primary-emerald: #00ffc8;
+            --bg-dark: #070b0d;
         }
         body {
             background-color: var(--bg-dark);
-            color: #e2e8f0;
+            color: #f1f5f9;
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
         .gradient-text {
-            background: linear-gradient(90deg, #00d2ff 0%, #3aefb2 100%);
+            background: linear-gradient(90deg, var(--primary-cyan) 0%, var(--primary-emerald) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .glass-card {
-            background: rgba(20, 30, 36, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 200, 0.1);
-            transition: all 0.3s ease;
+        /* Logo Styling Updated with your IBB Link */
+        .logo-img {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 2px solid rgba(0, 255, 200, 0.3);
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.4);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .glass-card:hover {
-            border-color: var(--primary-glow);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 200, 0.1);
+        .logo-img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 50px rgba(0, 255, 200, 0.7);
         }
-        .btn-glow {
+        .benefit-card {
+            background: rgba(13, 22, 26, 0.95);
+            border: 1px solid rgba(0, 255, 200, 0.2);
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+        /* Animated Glowing Border for Benefits */
+        .glowing-border::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: linear-gradient(45deg, var(--primary-cyan), transparent, var(--primary-emerald), transparent);
+            background-size: 200% 200%;
+            border-radius: 2.5rem;
+            z-index: -1;
+            opacity: 0.4;
+            animation: move-glow 4s linear infinite;
+        }
+        @keyframes move-glow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .btn-buy {
+            background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
             transition: 0.3s;
-            background: linear-gradient(135deg, #0d9488 0%, #065f46 100%);
         }
-        .btn-glow:hover {
-            box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
-            transform: scale(1.02);
+        .btn-buy:hover {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
+            transform: translateY(-2px);
         }
-        .wa-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--wa-green);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
+        .btn-cart {
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: 0.3s;
+        }
+        .btn-cart:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary-cyan);
         }
     </style>
 </head>
-<body class="p-4 md:p-8">
+<body class="py-12 px-4">
 
-    <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="wa-float">
-        <i class="fab fa-whatsapp text-2xl"></i>
-        <span class="hidden md:inline text-sm">Join Channel</span>
-    </a>
-
-    <header class="text-center mb-16">
-        <h1 class="text-5xl font-black tracking-tighter mb-2 italic uppercase">AZURITE <span class="gradient-text">IOS</span></h1>
-        <p class="text-gray-400 uppercase tracking-widest text-xs font-semibold">Premium Injection & High Performance Scripts</p>
-    </header>
-
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="text-center mb-10">
+        <img src="https://i.ibb.co/HpN4hJvk/image.png" class="logo-img" alt="Azurite iOS Logo">
         
-        <div class="glass-card rounded-3xl p-8 flex flex-col border-l-4 border-l-teal-500 relative overflow-hidden">
-            <div class="absolute top-4 right-4 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded italic">MOST POPULAR</div>
-            
-            <div class="mb-6">
-                <span class="bg-teal-900/50 text-teal-400 text-xs font-bold px-3 py-1 rounded-full border border-teal-500/30 uppercase tracking-tighter">Remote Method</span>
-                <h2 class="text-3xl font-bold mt-4">AZURITE REMOTE IOS</h2>
-                <p class="text-4xl font-black text-white mt-2">RM200 <span class="text-sm font-normal text-gray-500">/ VIP</span></p>
-            </div>
-
-            <div class="flex-grow">
-                <p class="text-teal-400 font-bold mb-3 border-b border-gray-800 pb-2 text-xs">SPECIAL FEATURES:</p>
-                <ul class="space-y-2 text-sm mb-6">
-                    <li class="flex items-center"><i class="fas fa-crosshairs mr-2 text-red-500"></i> AIMDRAG ❗️</li>
-                    <li class="flex items-center"><i class="fas fa-bullseye mr-2 text-red-500"></i> AIMDRAG X HOLO ❗️</li>
-                    <li class="flex items-center font-bold text-white mt-2 italic"><i class="fas fa-bolt mr-2 text-yellow-400"></i> INJECT VIA ID FF ONLY ✅</li>
-                </ul>
-
-                <p class="text-teal-400 font-bold mb-3 border-b border-gray-800 pb-2 text-xs uppercase">Premium Benefits:</p>
-                <ul class="grid grid-cols-2 gap-2 text-[11px] mb-8">
-                    <li class="flex items-center text-gray-300"><i class="fas fa-shield-alt text-teal-500 mr-2"></i> ANTIBAN</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-power-off text-teal-500 mr-2"></i> ON/OFF CHEAT</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-ban text-teal-500 mr-2"></i> ANTI BLACKLIST</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-gamepad text-teal-500 mr-2"></i> FF MAX / ORI</li>
-                    <li class="flex items-center text-gray-300 font-bold text-red-400"><i class="fas fa-times-circle mr-2"></i> NO GBOX/ESIGN</li>
-                    <li class="flex items-center text-gray-300 font-bold text-red-400"><i class="fas fa-times-circle mr-2"></i> NO SCARLET</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-mobile-alt text-teal-500 mr-2"></i> NO PC / NO FILE</li>
-                    <li class="flex items-center text-gray-300"><i class="fas fa-lock text-teal-500 mr-2"></i> ANTI BONGKAR</li>
-                </ul>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 mt-auto">
-                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 rounded-xl transition text-sm">ADD TO CART</button>
-                <a href="https://t.me/azurite_support" target="_blank" class="btn-glow text-white text-center font-bold py-3 rounded-xl text-sm">BUY NOW</a>
-            </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-tight">
+            AZURITE <span class="gradient-text">REMOTE</span>
+        </h1>
+        <div class="inline-block px-6 py-1 bg-teal-900/40 border border-teal-500/30 rounded-full mt-4">
+            <p class="text-teal-400 tracking-[0.4em] text-[10px] font-bold uppercase">iOS MOD ENGINE 2026</p>
         </div>
+    </div>
 
-        <div class="glass-card rounded-3xl p-8 border-gray-700">
-            <div class="mb-6">
-                <span class="bg-gray-800 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Lite Edition</span>
-                <h2 class="text-3xl font-bold mt-4">AZURITE LITE IOS</h2>
-                <p class="text-sm text-gray-500 mt-2 italic font-medium">Requires PC/Laptop for installation</p>
-            </div>
-
-            <div class="space-y-3 mb-8">
-                <div class="grid grid-cols-1 gap-2">
-                    <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
-                        <span class="text-sm">AimChest - RM75</span>
-                        <i class="fas fa-plus-circle text-teal-500"></i>
+    <div class="max-w-xl mx-auto glowing-border relative">
+        <div class="benefit-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl">
+            
+            <div class="mb-10 border-l-4 border-red-600 pl-6">
+                <p class="text-xs font-black text-gray-500 mb-4 tracking-widest uppercase italic">⚡ MOD ENGINE ENGINE</p>
+                <div class="space-y-2">
+                    <div class="flex items-center text-2xl font-black text-white italic tracking-tight">
+                        ∟ ⟁ AIMDRAG <span class="ml-2 text-red-500">❗️</span>
                     </div>
-                    <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
-                        <span class="text-sm">AimBody - RM75</span>
-                        <i class="fas fa-plus-circle text-teal-500"></i>
-                    </div>
-                    <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
-                        <span class="text-sm">AimNeck - RM75</span>
-                        <i class="fas fa-plus-circle text-teal-500"></i>
-                    </div>
-                    <div class="bg-black/40 p-3 rounded-lg flex justify-between items-center border border-white/5">
-                        <span class="text-sm">AimDrag - RM75</span>
-                        <i class="fas fa-plus-circle text-teal-500"></i>
+                    <div class="flex items-center text-2xl font-black text-white italic tracking-tight">
+                        ∟ ⟁ AIMDRAG X HOLO <span class="ml-2 text-red-500">❗️</span>
                     </div>
                 </div>
+            </div>
 
-                <p class="text-teal-400 font-bold border-b border-gray-800 pb-2 text-xs pt-4 uppercase">Benefits:</p>
-                <ul class="space-y-2 text-sm">
-                    <li class="flex items-center text-gray-400"><i class="fas fa-shield-alt text-teal-600 mr-2"></i> ANTIBAN & BLACKLIST</li>
-                    <li class="flex items-center text-gray-400"><i class="fas fa-laptop text-teal-600 mr-2"></i> PASANG PAKAI PC / LAPTOP</li>
-                    <li class="flex items-center text-gray-400"><i class="fas fa-headset text-teal-600 mr-2"></i> FULL SUPPORT 24/7</li>
+            <div class="mb-10">
+                <p class="text-xs font-black text-gray-500 mb-6 tracking-widest uppercase italic border-b border-white/10 pb-2">🛠️ SYSTEM SPECS & SECURITY</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center bg-white/5 p-4 rounded-2xl border border-white/5 hover:bg-teal-900/20 transition duration-300">
+                        <span class="text-teal-400 mr-4 font-bold text-lg">◈</span>
+                        <p class="text-sm"><span class="font-bold text-white uppercase tracking-tighter mr-2">SECURITY:</span> Anti-Ban & Anti-Blacklist ✅</p>
+                    </li>
+                    <li class="flex items-center bg-white/5 p-4 rounded-2xl border border-white/5 hover:bg-teal-900/20 transition duration-300">
+                        <span class="text-teal-400 mr-4 font-bold text-lg">◈</span>
+                        <p class="text-sm"><span class="font-bold text-white uppercase tracking-tighter mr-2">CONTROL:</span> Auto Delete on FF Off ✅</p>
+                    </li>
+                    <li class="flex items-center bg-white/5 p-4 rounded-2xl border border-white/5 hover:bg-teal-900/20 transition duration-300 text-teal-200">
+                        <span class="text-teal-400 mr-4 font-bold text-lg">◈</span>
+                        <p class="text-sm"><span class="font-bold text-white uppercase tracking-tighter mr-2">SETUP:</span> No PC / File / Gbox / Esign ✅</p>
+                    </li>
+                    <li class="flex items-center bg-white/5 p-4 rounded-2xl border border-white/5 hover:bg-teal-900/20 transition duration-300 font-bold">
+                        <span class="text-teal-400 mr-4 font-bold text-lg">◈</span>
+                        <p class="text-sm"><span class="font-bold text-white uppercase tracking-tighter mr-2">METHOD:</span> Server Inject via ID FF ✅</p>
+                    </li>
                 </ul>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 mt-8">
-                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 rounded-xl transition text-sm">ADD TO CART</button>
-                <a href="https://t.me/azurite_support" target="_blank" class="btn-glow text-white text-center font-bold py-3 rounded-xl text-sm">BUY NOW</a>
+            <div class="mb-10">
+                <p class="text-xs font-black text-gray-500 mb-6 tracking-widest uppercase">💳 SUBSCRIPTION PLANS</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-black/60 border border-white/5 p-5 rounded-3xl group hover:border-teal-500/50 transition">
+                        <p class="text-[10px] text-teal-500 font-black uppercase mb-1">1 DAY</p>
+                        <p class="text-3xl font-black text-white italic">RM10</p>
+                    </div>
+                    <div class="bg-black/60 border border-white/5 p-5 rounded-3xl group hover:border-teal-500/50 transition">
+                        <p class="text-[10px] text-teal-500 font-black uppercase mb-1">3 DAY</p>
+                        <p class="text-3xl font-black text-white italic">RM15</p>
+                    </div>
+                    <div class="bg-black/60 border border-white/5 p-5 rounded-3xl group hover:border-teal-500/50 transition">
+                        <p class="text-[10px] text-teal-500 font-black uppercase mb-1">7 DAY</p>
+                        <p class="text-3xl font-black text-white italic">RM35</p>
+                    </div>
+                    <div class="bg-teal-500 border-none p-5 rounded-3xl shadow-[0_0_30px_rgba(20,184,166,0.4)]">
+                        <p class="text-[10px] text-black font-black uppercase mb-1 tracking-tighter italic">30 DAY (FULL ACCESS)</p>
+                        <p class="text-3xl font-black text-black italic">RM70</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <button onclick="alert('Product added to cart!')" class="btn-cart md:col-span-1 py-5 rounded-3xl text-white font-bold text-sm uppercase tracking-widest">
+                    ADD TO CART
+                </button>
+                <a href="https://wa.me/60143191625?text=Hello%20Azurite%20iOS,%20I%20want%20to%20buy%20Remote%20iOS" 
+                   class="btn-buy md:col-span-2 flex items-center justify-center py-5 rounded-3xl text-white font-black text-xl tracking-tighter uppercase">
+                   <i class="fab fa-whatsapp mr-3 text-2xl"></i> BUY NOW
+                </a>
+            </div>
+            
+            <div class="mt-10 p-5 rounded-3xl bg-white/5 border border-white/5 text-center">
+                <p class="text-[10px] text-gray-500 mb-3 uppercase font-black tracking-widest italic">For information Azurite can join this channel WhatsApp</p>
+                <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="text-sm font-black text-teal-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                   <i class="fab fa-whatsapp text-lg"></i> JOIN OFFICIAL CHANNEL
+                </a>
             </div>
         </div>
-
     </div>
 
-    <div class="max-w-6xl mx-auto mt-12">
-        <div class="bg-gradient-to-r from-teal-900/20 to-transparent p-6 rounded-2xl border border-teal-500/20 text-center md:text-left md:flex justify-between items-center">
-            <div>
-                <h3 class="text-xl font-bold text-white mb-1">Stay Updated!</h3>
-                <p class="text-gray-400 text-sm italic">For information Azurite can join this channel WhatsApp.</p>
-            </div>
-            <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="mt-4 md:mt-0 inline-block bg-[#25D366] text-black font-black px-6 py-3 rounded-full hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition duration-300">
-                <i class="fab fa-whatsapp mr-2"></i> JOIN WHATSAPP CHANNEL
-            </a>
-        </div>
-    </div>
-
-    <footer class="mt-20 text-center text-gray-600 text-[10px] uppercase tracking-widest pb-10">
-        <p>&copy; 2026 AZURITE IOS | SECURITY & STABILITY IS OUR PRIORITY</p>
+    <footer class="mt-20 text-center pb-12">
+        <p class="text-gray-800 text-[10px] font-black tracking-[0.6em] uppercase mb-2">AZURITE IOS MODDING SOLUTIONS</p>
+        <p class="text-gray-900 text-[8px] font-bold uppercase italic">Professional Injection Service • 24/7 Support Guaranteed</p>
     </footer>
 
 </body>
