@@ -3,130 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZURITE REMOTE IOS | Professional Injector</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>AZURITE REMOTE IOS | Store</title>
     <style>
+        :root {
+            --primary-cyan: #00f2ff;
+            --primary-purple: #bc13fe;
+            --dark-bg: #0a0a0a;
+            --card-bg: #151515;
+        }
+
         body {
-            background-color: #030712;
-            color: #f8fafc;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(20, 184, 166, 0.2);
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #2dd4bf, #3b82f6);
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            background: linear-gradient(to right, var(--primary-cyan), var(--primary-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
         }
-        .btn-glow:hover {
-            box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
+
+        .container {
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--card-bg);
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-cyan);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: var(--primary-cyan);
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        /* Features List */
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .features li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--primary-cyan);
+        }
+
+        .features li.no::before {
+            content: '✘';
+            color: #ff4d4d;
+        }
+
+        /* Button */
+        .buy-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-cyan), #00a2ff);
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin-top: 15px;
+            width: 80%;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 0 15px var(--primary-cyan);
+        }
+
+        /* Info Section */
+        .info-box {
+            background: rgba(188, 19, 254, 0.1);
+            border: 1px solid var(--primary-purple);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.8rem;
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <h1 class="text-2xl font-bold tracking-tighter gradient-text">AZURITE REMOTE</h1>
-        <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" target="_blank" class="bg-teal-600 hover:bg-teal-500 px-5 py-2 rounded-full text-sm font-semibold transition btn-glow">
-            <i class="fab fa-whatsapp mr-2"></i>Join Channel
-        </a>
-    </nav>
-
-    <header class="text-center py-16 px-4">
-        <div class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-teal-400 uppercase bg-teal-400/10 rounded-full">
-            iOS 12 - iOS 26 Supported
-        </div>
-        <h2 class="text-5xl md:text-7xl font-extrabold mb-6">AZURITE REMOTE <span class="gradient-text">IOS</span></h2>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-            Penyelesaian terbaik untuk FreeFire. Tanpa PC, tanpa fail tambahan. Terus inject via IP Address dengan ciri keselamatan tahap tinggi.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#pricing" class="bg-teal-500 hover:bg-teal-400 text-black px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 btn-glow">
-                LIHAT HARGA
-            </a>
-            <a href="https://t.me/azurite_support" target="_blank" class="glass-card px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition">
-                SUPPORT TG
-            </a>
-        </div>
+    <header>
+        <h1>AZURITE REMOTE IOS</h1>
+        <p>Premium Aimdrag Solution for Mobile Legends/FF</p>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-12">
-        <h3 class="text-2xl font-bold mb-8 text-center uppercase tracking-widest text-teal-500">Fitur & Kelebihan</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-8 rounded-2xl hover:border-teal-400 transition">
-                <i class="fas fa-shield-alt text-teal-400 text-3xl mb-4"></i>
-                <h4 class="text-xl font-bold mb-2 text-white">Anti-Ban & Anti BL</h4>
-                <p class="text-gray-400 text-sm">Sistem perlindungan yang dioptimumkan untuk keselamatan akaun utama anda.</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl hover:border-teal-400 transition">
-                <i class="fas fa-bolt text-teal-400 text-3xl mb-4"></i>
-                <h4 class="text-xl font-bold mb-2 text-white">Direct Injection</h4>
-                <p class="text-gray-400 text-sm">Inject terus melalui IP Address. Tidak memerlukan Gbox, Esign, atau PC.</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl hover:border-teal-400 transition">
-                <i class="fas fa-crosshairs text-teal-400 text-3xl mb-4"></i>
-                <h4 class="text-xl font-bold mb-2 text-white">Aimdrag X Holo</h4>
-                <p class="text-gray-400 text-sm">Fitur Aimdrag Only & Aimdrag X Holo untuk kawalan yang lebih tepat.</p>
-            </div>
+    <div class="container">
+        <div class="card">
+            <h2>Harian</h2>
+            <span class="price">RM 10 <span>/ 1 Day</span></span>
+            <ul class="features">
+                <li>ANTIBAN / ANTI BL</li>
+                <li>NO SURCIN</li>
+                <li>FF MAX & FF ORI</li>
+                <li>IOS 12 - IOS 26</li>
+                <li class="no">NO GBOX / ESIGN / PC</li>
+            </ul>
+            <a href="https://t.me/azurite_support" class="buy-btn">BELI SEKARANG</a>
         </div>
 
-        <div class="mt-12 glass-card p-8 rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-teal-400"></i> FF MAX & ORI</div>
-            <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-teal-400"></i> NO SURCIN</div>
-            <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-teal-400"></i> ANTI BONGKAR</div>
-            <div class="flex items-center gap-2 text-sm"><i class="fas fa-check-circle text-teal-400"></i> IPHONE ONLY</div>
+        <div class="card" style="border-color: var(--primary-purple);">
+            <h2 style="color: var(--primary-purple);">Mingguan</h2>
+            <span class="price">RM 35 <span>/ 7 Days</span></span>
+            <ul class="features">
+                <li>Semua Ciri Pro</li>
+                <li>BOLEH ON/OFF</li>
+                <li>ANTI BONGKAR</li>
+                <li>IPHONE ONLY</li>
+                <li>Support 24/7</li>
+            </ul>
+            <a href="https://t.me/azurite_support" class="buy-btn" style="background: var(--primary-purple); color: white;">BELI SEKARANG</a>
         </div>
-    </section>
 
-    <section id="pricing" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h3 class="text-4xl font-extrabold mb-4 uppercase">Pilihan <span class="text-teal-500">Pakej</span></h3>
-            <p class="text-gray-400">Pilih tempoh langganan yang sesuai dengan keperluan anda.</p>
+        <div class="card">
+            <h2>Bulanan</h2>
+            <span class="price">RM 70 <span>/ 30 Days</span></span>
+            <ul class="features">
+                <li>Akses Penuh Premium</li>
+                <li>AIMDRAG ONLY</li>
+                <li>AIMDRAG X HOLO</li>
+                <li>Paling Jimat</li>
+                <li>Update Percuma</li>
+            </ul>
+            <a href="https://t.me/azurite_support" class="buy-btn">BELI SEKARANG</a>
         </div>
+    </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-teal-500 hover:-translate-y-2 transition">
-                <h4 class="text-lg font-medium text-gray-400">Harian</h4>
-                <div class="text-4xl font-bold my-4">RM 10</div>
-                <p class="text-xs text-teal-400 mb-6">1 DAY ACCESS</p>
-                <a href="https://t.me/azurite_support" class="block w-full py-3 bg-teal-500 text-black font-bold rounded-xl hover:bg-teal-400 transition">BUY NOW</a>
-            </div>
+    <div class="info-box">
+        <strong>FITUR UTAMA:</strong> AIMDRAG ONLY & AIMDRAG X HOLO <br>
+        <small>Tak perlu download IPA mod. Direct ON/OFF dalam sistem.</small>
+    </div>
 
-            <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-teal-500 hover:-translate-y-2 transition">
-                <h4 class="text-lg font-medium text-gray-400">Mingguan</h4>
-                <div class="text-4xl font-bold my-4">RM 35</div>
-                <p class="text-xs text-teal-400 mb-6">7 DAYS ACCESS</p>
-                <a href="https://t.me/azurite_support" class="block w-full py-3 bg-teal-500 text-black font-bold rounded-xl hover:bg-teal-400 transition">BUY NOW</a>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-blue-500 hover:-translate-y-2 transition ring-2 ring-blue-500/50">
-                <div class="bg-blue-500 text-white text-[10px] font-bold py-1 px-3 rounded-full absolute top-4 right-4 uppercase">Popular</div>
-                <h4 class="text-lg font-medium text-gray-400">Bulanan</h4>
-                <div class="text-4xl font-bold my-4">RM 70</div>
-                <p class="text-xs text-blue-400 mb-6">30 DAYS ACCESS</p>
-                <a href="https://t.me/azurite_support" class="block w-full py-3 bg-blue-500 text-white font-bold rounded-xl hover:bg-blue-400 transition">BUY NOW</a>
-            </div>
-
-            <div class="glass-card p-6 rounded-3xl flex justify-between items-center lg:col-span-3 border-l-4 border-teal-500">
-                <div class="text-left">
-                    <h4 class="font-bold">60 Days / 90 Days</h4>
-                    <p class="text-sm text-gray-400">RM 120 / RM 200</p>
-                </div>
-                <a href="https://t.me/azurite_support" class="px-6 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition font-bold">PM FOR V.I.P</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black/50 py-10 text-center border-t border-slate-800">
-        <p class="text-gray-500 text-sm mb-4 uppercase tracking-widest">&copy; 2026 AZURITE REMOTE IOS - All Rights Reserved</p>
-        <div class="flex justify-center gap-6">
-            <a href="https://whatsapp.com/channel/0029VbC7rS8CMY0Ma54MBr3X" class="text-gray-400 hover:text-teal-400 transition text-2xl"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://t.me/azurite_support" class="text-gray-400 hover:text-blue-400 transition text-2xl"><i class="fab fa-telegram"></i></a>
-        </div>
+    <footer>
+        &copy; 2024 AZURITE REMOTE | Website by Gemini AI
     </footer>
 
 </body>
